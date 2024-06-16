@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIZZERIA 100% GERLI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mostrar la sección inicial
+            showSection('menu');
+
+            // Función para mostrar la sección seleccionada y ocultar las demás
+            function showSection(sectionId) {
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    section.style.display = section.id === sectionId ? 'block' : 'none';
+                });
+            }
+
+            // Añadir event listeners a los enlaces del menú
+            const navLinks = document.querySelectorAll('header nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const sectionId = this.getAttribute('href').substring(1);
+                    showSection(sectionId);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <h1>PIZZERIA 100% GERLI</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#recetas">Recetas</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#locales">Nuestros Locales</a></li>
+                    <li><a href="#registro">Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Sección de Menú -->
+<section id="menu" class="active">
+    <div class="container">
+        <h2>Menú</h2>
+        <p>Descubre nuestros deliciosos platos.</p>
+        <div class="menu-grid">
+            <!-- Plato 1: Milanesa con puré -->
+            <div class="menu-item">
+                <a href="http://mpago.li/17CsvKC" target="_blank">
+                    <img src="img/milanesa.jpg" alt="Milanesa con puré" width="150" height="150" style="border:0">
+                </a>
+                <p>Milanesa acompañada de puré de papa.</p>
+                <span>$10.000</span>
+            </div>
+            <!-- Plato 2: Pizza de muzzarella -->
+            <div class="menu-item">
+                <a href="http://mpago.li/17CsvKC" target="_blank">
+                    <img src="img/calabresa.jpg" alt="Pizza de muzzarella" width="150" height="150" style="border:0">
+                </a>
+                <p>Pizza de muzzarella con salsa de tomate y albahaca.</p>
+                <span>$10.000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección de Recetas -->
+<section id="recetas">
+    <div class="container">
+        <h2>Recetas</h2>
+        <p>Prueba nuestras recetas en tu casa.</p>
+        <div class="recetas-grid">
+            <!-- Receta 1: Pizza Napolitana -->
+            <div class="receta-item">
+                <h3>Pizza Napolitana</h3>
+                <p>-</p>
+                <p>La clásica pizza napolitana lleva los siguientes ingredientes:</p>
+              
+                <ul>
+                    <li>Masa de pizza fresca</li>
+                    <li>Salsa de tomate casera</li>
+                    <li>Mozzarella fresca</li>
+                    <li>Albahaca fresca</li>
+                    <li>Aceite de oliva virgen extra</li>
+                    <li>Sal y pimienta</li>
+                </ul>
+                <p> </p>
+                <p>Para prepararla, sigue estos pasos:</p>
+
+                <ol>
+                    <li>Extiende la masa en una bandeja para pizza.</li>
+                    <li>Agrega la salsa de tomate y extiéndela uniformemente.</li>
+                    <li>Corta la mozzarella en rodajas y distribúyela sobre la salsa.</li>
+                    <li>Decora con hojas de albahaca.</li>
+                    <li>Salpica con aceite de oliva, sal y pimienta al gusto.</li>
+                    <li>Hornea a temperatura alta hasta que la masa esté dorada y crujiente.</li>
+                </ol>
+               
+            </div>
+            
+            <!-- Receta 2: Pizza Calabresa -->
+            <div class="receta-item">
+                <h3>Pizza Calabresa</h3>
+                <p>-</p>
+                <p>La pizza calabresa es deliciosa y lleva los siguientes ingredientes:</p>
+                <ul>
+                  
+                    <li>Masa de pizza fresca</li>
+                    <li>Salsa de tomate</li>
+                    <li>Mozzarella rallada</li>
+                    <li>Salchicha tipo calabresa</li>
+                    <li>Cebolla en rodajas finas</li>
+                    <li>Aceitunas negras (opcional)</li>
+                    <li>Orégano seco</li>
+                </ul>
+                <p> </p>
+                <p>Para prepararla, sigue estos pasos:</p>
+                <ol>
+                    <li>Extiende la masa y cubre con la salsa de tomate.</li>
+                    <li>Distribuye la mozzarella rallada sobre la salsa.</li>
+                    <li>Agrega las rodajas de salchicha y cebolla.</li>
+                    <li>Si deseas, puedes añadir aceitunas negras.</li>
+                    <li>Espolvorea con orégano al gusto.</li>
+                    <li>Hornea hasta que la pizza esté dorada y los bordes crujientes.</li>
+                </ol>
+              
+            </div>
+            <!-- Más recetas -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+        
+            <div class="sobre-nosotros-content">
+               
+                <p>Fuimos, somos y seremos el clásico de Gerli - Fuego prendido desde 1932.</p>
+            </div>
+            <div class="employee-table">
+                <h3>Equipo</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                            <th>Edad</th>
+                            <th>Hobby</th>
+                            <th>Familia</th>
+                            <th>Comida Favorita</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>Chef</td>
+                            <td>35</td>
+                            <td>Guitarrista</td>
+                            <td>Vive con sus padres</td>
+                            <td>Asado</td>
+                        </tr>
+                        <tr>
+                            <td>María García</td>
+                            <td>Mesera</td>
+                            <td>28</td>
+                            <td>Leer</td>
+                            <td>Vive con su hijo</td>
+                            <td>Pizzas</td>
+                        </tr>
+                        <tr>
+                            <td>Pedro López</td>
+                            <td>Gerente</td>
+                            <td>42</td>
+                            <td>Rescatista</td>
+                            <td>Tiene 12 mascotitas</td>
+                            <td>Pastas</td>
+                        </tr>
+                        <tr>
+                            <td>Ana Ruiz</td>
+                            <td>Recepcionista</td>
+                            <td>30</td>
+                            <td>Bailar</td>
+                            <td>Vive con su pareja</td>
+                            <td>Salmon rosado</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Nuestros Locales -->
+    <section id="locales">
+        <div class="container">
+            <h2>Nuestros Locales</h2>
+            <p>Encuentra nuestro restaurante más cercano.</p>
+            <div class="locales-grid">
+                <!-- Añadir locales aquí -->
+                <div class="local-item">
+                    <h3>Local GERLI - LANUS</h3>
+                    <p>Av. San Martin 981</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13123.18591977812!2d-58.413043320178986!3d-34.68508567820803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccea47cdc173%3A0x1702c83c9df74172!2sLA%20AVENIDA%20-%20pizzas%20y%20empanadas%20(gerli)!5e0!3m2!1ses!2sar!4v1718501801084!5m2!1ses!2sar" 
+                    width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="local-item">
+                    <h3>Local GERLI  -  AVELLANEDA</h3>
+                    <p>Lacarra 1587</p>
+                             <!-- Mapa de Google -->
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4404.727549725311!2d-58.37323967983582!3d-34.684704468356955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccd27ba3273d%3A0x297a0b72f70c8f4d!2sPizza%20Lo%2BHot!5e0!3m2!1ses!2sar!4v1718501657259!5m2!1ses!2sar" 
+                             width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- Más locales -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Registro -->
+    <section id="registro">
+        <div class="container">
+            <h2>Registro</h2>
+            <p>Regístrate para recibir nuestras novedades y promociones.</p>
+            <p> </p>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <p> </p>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <p> </p>
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" required>
+                <p> </p>
+                <label for="favorite-food">Comida Favorita:</label>
+                <input type="text" id="favorite-food" name="favorite-food" required>
+                <p> </p>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 100% Gerli. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

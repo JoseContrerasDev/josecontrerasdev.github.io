@@ -1,0 +1,120 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo y fuentes */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%; /* Ajustado para mejor adaptabilidad */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Espaciado interno para todos los lados */
+}
+
+/* Encabezado */
+header {
+    background-color: #721f1f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Ajuste para que los elementos del menú puedan envolverse */
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sección */
+section {
+    padding: 20px 0; /* Ajuste para mejor separación */
+    text-align: center;
+}
+
+section.active {
+    display: block;
+}
+
+/* Títulos */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Cuadrículas de contenido */
+.menu-grid, .recetas-grid, .locales-grid {
+    display: grid; /* Cambio a grid para mejor manejo de responsividad */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas automáticas con tamaño mínimo */
+    gap: 20px; /* Espacio entre elementos */
+    justify-items: center; /* Centrado horizontal de elementos */
+}
+
+.menu-item, .receta-item, .local-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Formulario */
+#registro form {
+    display: grid;
+    gap: 10px;
+}
+
+#registro form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#registro form input,
+#registro form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#registro form button {
+    background-color: #721f1f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Pie de página */
+footer {
+    background-color: #721f1f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
